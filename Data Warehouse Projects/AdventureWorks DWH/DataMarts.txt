@@ -1,0 +1,28 @@
+FactInternetSales
+   |
+   +-- XX (FK) --- DIMProduct
+   |
+   +-- XX (FK) ------ DIMDate
+   |
+   +-- XX (FK) --- DIMCustomer
+   |
+   +-- XX (FK) -- DIMSalesterritory
+   |
+   +-- XX (FK) -- DIMCurrency
+
+
+
+FactResellerSales
+   |
+   +-- XX (FK) --- DIMProduct
+   |
+   +-- XX (FK) ------ DIMDate
+   |
+   +-- XX (FK) --- DIMReseller
+   |
+   +-- XX (FK) -- DIMSalesterritory
+   |
+   +-- XX (FK) -- DIMCurrency
+
+
+
