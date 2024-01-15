@@ -1,0 +1,36 @@
+Create Procedure [dbo].[Refresh_DimCurrency]
+as
+begin
+
+-- Insert New Records:
+-- It inserts records from the staging table [erp].[Currency] into the dimension table [dbo].[DimCurrency] where there is no match on CurrencyAlternateKey.
+
+Insert into [dbo].[DimCurrency]
+
+(
+[CurrencyAlternateKey]
+,[CurrencyName]
+)
+
+SELECT [CurrencyCode]
+      ,[Name]    
+  FROM [AWN_STG_Demo].[erp].[Currency] stg (nolock)
+    left join [dbo].[DimCurrency] Dim  (nolock)
+  on stg.CurrencyCode = Dim.CurrencyAlternateKey
+    where Dim.CurrencyAlternateKey is null
+
+-- Update Existing Records:
+-- It updates the CurrencyName in the [dbo].[DimCurrency] table for existing records where there is a match on CurrencyAlternateKey.
+
+  Update Dim
+
+  Set [CurrencyName] = Name
+  from [dbo].[DimCurrency] Dim  (nolock)
+  inner join [AWN_STG_Demo].[erp].[Currency] stg  (nolock)
+  on stg.CurrencyCode = Dim.CurrencyAlternateKey
+
+end 
+
+
+
+	

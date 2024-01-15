@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34114.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ETL_Source_Stagging", "ETL_Source_Stagging.dtproj", "{0E692370-E4DD-417C-9BE7-5B10FD555A00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E692370-E4DD-417C-9BE7-5B10FD555A00}.Development|Default.ActiveCfg = Development
+		{0E692370-E4DD-417C-9BE7-5B10FD555A00}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4016014D-C207-4FB5-A43A-2265C28A59AE}
+	EndGlobalSection
+EndGlobal

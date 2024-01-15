@@ -1,0 +1,3245 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/8/2023 10:42:54 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-22BIBLH"
+  DTS:CreatorName="DESKTOP-22BIBLH\DA"
+  DTS:DTSID="{A4E2B016-3C96-40C1-A80A-42F4B89BEB62}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{918CC4C5-2D4C-498F-80D9-42FBF11BAE84}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8C365C16-794C-484F-902D-0D13DB23A679}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Senior\Hands-on\Telecom ETL\source_files\batch 2\batch 02 - file 01.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{5F731ECE-0A7A-488E-BEAC-B531ED99C12E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="imsi"
+              DTS:DTSID="{D1753151-A6C2-4194-ADFB-9310C8D8FAFB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="imei"
+              DTS:DTSID="{B03A9E17-9B4D-4E9D-9155-F48615DAC088}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cell"
+              DTS:DTSID="{90402EB3-56A3-4EE3-AE40-07FA82D2EF51}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lac"
+              DTS:DTSID="{A1266F35-28A1-412E-AD3D-C7780CA89602}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="event_type"
+              DTS:DTSID="{753D45FB-76D0-4912-9C21-4A66180A5F76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="event_ts"
+              DTS:DTSID="{1874920E-8189-495E-A5BB-AEFAB12A8CEF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FlatFiles0]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8901B936-B367-41AD-9AE9-A6B3F7438ACE}"
+      DTS:ObjectName="FlatFiles0">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::FullPath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Senior\Hands-on\Telecom ETL\source_files\batch 0\01_clean_data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{576BC4A6-F79B-4F9B-BA68-12B0AAF0FCCA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="imsi"
+              DTS:DTSID="{F68870EA-916F-4478-A7C8-FDA88FD60CA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="imei"
+              DTS:DTSID="{5C9FCD6A-E237-493D-9E90-33C89A9E2618}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cell"
+              DTS:DTSID="{5F6B1F0F-93DF-42F0-A6AD-2408DF39F58F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lac"
+              DTS:DTSID="{2344A632-470A-4CA2-96AB-0DB3DBAA6677}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="event_type"
+              DTS:DTSID="{0AE5B3F4-3E12-49B8-8337-95771E6757EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="event_ts"
+              DTS:DTSID="{2680533D-16C9-40BB-8BCC-54891ADADAF8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FlatFiles1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{69B5DBD3-FF8D-443E-867F-B9D18C9A5A72}"
+      DTS:ObjectName="FlatFiles1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Senior\Hands-on\Telecom ETL\source_files\batch 1\batch 01 - file 01.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{2FB8B607-8A43-46A5-8186-7B3194263DCA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="imsi"
+              DTS:DTSID="{50817E3D-FF51-4483-A51E-C8EBB9B8B1E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="imei"
+              DTS:DTSID="{B135E039-DDAC-4DC0-B7C6-82B65071357C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cell"
+              DTS:DTSID="{7506345C-939E-428D-AE70-B6637ED1AC16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lac"
+              DTS:DTSID="{478106DF-2DB7-423C-BB5F-7E5333C34407}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="event_type"
+              DTS:DTSID="{FA369987-E12F-423E-B4E5-292043FC0829}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="event_ts"
+              DTS:DTSID="{B48C0CF5-E93E-44B9-90F4-D2B19C905D8C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Tele_DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{18EF257B-A7B5-4E12-9C69-1F3B6EA15917}"
+      DTS:ObjectName="LocalHost.Tele_DB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Tele_DB;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{18EF257B-A7B5-4E12-9C69-1F3B6EA15917}LocalHost.Tele_DB;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Transactions]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{93EB8E81-1CA9-4660-A673-4CAFDD651C66}"
+      DTS:ObjectName="Transactions">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Tele_DB;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{93EB8E81-1CA9-4660-A673-4CAFDD651C66}LocalHost.Tele_DB;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9F814DA6-5F5E-417B-A425-E77A67C6282A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="audit_id">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{00A73D13-29A4-4637-A143-3BD17E27BBD3}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="batch_id">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B7133C9A-EC3C-491E-AD0D-2CA27B962E46}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Copy_Move">
+      <DTS:VariableValue
+        DTS:DataType="8">copy</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FC612E0D-73F2-45B3-A869-8A7D8970753D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="dest_rows_err">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CF41B894-14BE-40FE-9937-F809E4553284}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="dest_rows_ERR">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F6A53BA1-7D51-4E74-9CC2-51894F6DAD11}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="extracted_rows">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3D992AE9-6E61-423F-8DAB-FC3B749BD657}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="extracted_row_ERR">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9F85015F-8E73-4360-80D9-CFA45B52AA4F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FF_Archive">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Senior\Hands-on\Telecom ETL\Archive\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9D4DB243-587F-4BCD-AC6B-CD94F241D93A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileExtension">
+      <DTS:VariableValue
+        DTS:DataType="8">.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FF1082A6-31B3-42A6-9A65-D73EED4DE218}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8">01_clean_data</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E71FBFE6-2CC8-4197-8ABB-39098E9B6044}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FolderPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Senior\Hands-on\Telecom ETL\source_files\batch 0\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DBA8C4DD-D68A-4E44-9C58-2C0E0A36C958}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::FolderPath] + @[User::FileName] + @[User::FileExtension]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FullPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Senior\Hands-on\Telecom ETL\source_files\batch 0\01_clean_data.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{012799E5-859C-41D0-BF42-577385D94C27}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="pre_insterted_rows">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Empty Transaction Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B2CEBB1A-B8FD-4B09-A9DC-1356C62A1D11}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Empty Transaction Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{18EF257B-A7B5-4E12-9C69-1F3B6EA15917}"
+          SQLTask:SqlStatementSource="delete from transactions&#xA;delete from FF_ERR_Transactions&#xA;delete from [ERR_Transactions]&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Full Loop SRC File"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{D93E2986-8014-46E1-876B-23C69E422986}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Full Loop SRC File">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{E52E66E2-38F0-4544-A53B-6B69A5B73866}"
+        DTS:ObjectName="{E52E66E2-38F0-4544-A53B-6B69A5B73866}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="D:\Senior\Hands-on\Telecom ETL\source_files\batch 0" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="2" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Full Loop SRC File\CP FF to Archive"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{a6a19e8a-1d2e-4cd0-bf18-e868a639f422}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="CP FF to Archive"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::FullPath"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::FF_Archive"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Full Loop SRC File\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{52B946CE-8794-4D1E-A053-2286B889FAF5}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{18EF257B-A7B5-4E12-9C69-1F3B6EA15917}"
+              SQLTask:SqlStatementSource="update Auditing&#xA; set &#xA;    &#xA;total_rows = ? + ?, -- 0  extracted processed + 1 extracted error&#xA;    [rows_inserted] = ? - ?, -- 2 pre insert -  3 dest error&#xA;    [rows_rejected] = ? + ?, -- 4 extracted error  +  5 dest error&#xA;&#x9;SuccessfulProcessingInd = 'Y',&#xA;&#x9;&#xA;updated_at = getdate()&#xA;&#xA;where id = ? -- 6 audit_id&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::extracted_rows"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::extracted_row_ERR"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::pre_insterted_rows"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::dest_rows_ERR"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="User::extracted_row_ERR"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="User::dest_rows_ERR"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="User::audit_id"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Full Loop SRC File\Insert Record IN Auditing Table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{F7C164F5-5992-4247-8AC1-4F13500A014C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert Record IN Auditing Table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{18EF257B-A7B5-4E12-9C69-1F3B6EA15917}"
+              SQLTask:SqlStatementSource="insert into Auditing ( batch_id, package_name, file_name, total_rows, rows_inserted, rows_rejected, SuccessfulProcessingInd)&#xA;output inserted.id as audit_id&#xA;&#xA;values (&#xA;&#x9;&#xA;?, -- 0 batch id&#xA;&#x9;&#xA;?, -- 1 package name&#xA;&#x9;&#xA;?, -- 2 file_name&#xA;&#x9;&#xA;NULL, -- 3 rows_extracted&#xA;&#x9;&#xA;NULL, -- 4 rows_inserted&#xA;&#x9;&#xA;NULL, -- 5 rows_rejected&#xA;&#x9;&#xA;'N'&#xA;&#x9;)&#xA;"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::audit_id" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::batch_id"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="131"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::PackageName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::FileName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Full Loop SRC File\Load FF to Telecom_DB"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{69F8ACF5-8BB5-4D0D-89CA-EFB70C434ABD}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load FF to Telecom_DB"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Audit_id"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Output].Columns[audit_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Output].Columns[audit_id]"
+                          name="audit_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::audit_id]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::audit_id]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Audi_id"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Outputs[Derived Column Output].Columns[audit_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Outputs[Derived Column Output].Columns[audit_id]"
+                          name="audit_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::audit_id]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::audit_id]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="DER Replace Null Values"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Inputs[Derived Column Input].Columns[imsi]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="9"
+                          cachedName="imsi"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imsi]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,9,1252)(#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imsi]} == "" ? NULL(DT_WSTR,9) : #{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imsi]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,9,1252)(imsi == "" ? NULL(DT_WSTR,9) : imsi)</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Inputs[Derived Column Input].Columns[imei]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="14"
+                          cachedName="imei"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,14,1252)(#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]} == "" ? NULL(DT_WSTR,14) : #{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,14,1252)(imei == "" ? NULL(DT_WSTR,14) : imei)</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Inputs[Derived Column Input].Columns[cell]"
+                          cachedDataType="i8"
+                          cachedName="cell"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[cell]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_I8)(#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[cell]} == 0 ? NULL(DT_I8) : #{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[cell]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_I8)(cell == 0 ? NULL(DT_I8) : cell)</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Inputs[Derived Column Input].Columns[lac]"
+                          cachedDataType="i8"
+                          cachedName="lac"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[lac]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_I8)(#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[lac]} == 0 ? NULL(DT_I8) : #{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[lac]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_I8)(lac == 0 ? NULL(DT_I8) : lac)</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Inputs[Derived Column Input].Columns[event_type]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="event_type"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_type]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,1,1252)(#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_type]} == "" ? NULL(DT_WSTR,1) : #{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_type]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,1,1252)(event_type == "" ? NULL(DT_WSTR,1) : event_type)</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Inputs[Derived Column Input].Columns[event_ts]"
+                          cachedDataType="date"
+                          cachedName="event_ts"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_ts]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_DATE)((DT_I4)#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_ts]} == 0 ? NULL(DT_DATE) : #{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_ts]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_DATE)((DT_I4)event_ts == 0 ? NULL(DT_DATE) : event_ts)</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Inputs[Derived Column Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="DER SNR n TAC"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Inputs[Derived Column Input].Columns[imei]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="14"
+                          cachedName="imei"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Output].Columns[TAC]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="8"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Output].Columns[TAC]"
+                          name="TAC"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,8,1252)(([ISNULL](#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]}) || [LEN](#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]}) &lt; 14) ? "-99999" : [SUBSTRING](#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]},1,8))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,8,1252)((ISNULL(imei) || LEN(imei) &lt; 14) ? "-99999" : SUBSTRING(imei,1,8))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Output].Columns[SNR]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="6"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Output].Columns[SNR]"
+                          name="SNR"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,6,1252)(([ISNULL](#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]}) || [LEN](#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]}) &lt; 14) ? "-99999" : [SUBSTRING](#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]},9,6))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,6,1252)((ISNULL(imei) || LEN(imei) &lt; 14) ? "-99999" : SUBSTRING(imei,9,6))</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Subscriber_Id"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Inputs[Derived Column Input].Columns[subscriber_id]"
+                          cachedDataType="i4"
+                          cachedName="subscriber_id"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Match Output].Columns[subscriber_id]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Match Output].Columns[subscriber_id]}) ? -99999 : #{Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Match Output].Columns[subscriber_id]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(subscriber_id) ? -99999 : subscriber_id</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Inputs[Derived Column Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Dest Err Rows"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Dest Err Rows">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::dest_rows_ERR</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Dest Err Rows.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Dest Err Rows.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Dest Err Rows.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="FF SRC Files"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[FlatFiles0]"
+                      connectionManagerRefId="Package.ConnectionManagers[FlatFiles0]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[id]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[id]"
+                          length="50"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[id]"
+                          name="id"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imsi]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[imsi]"
+                          length="9"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imsi]"
+                          name="imsi"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[imei]"
+                          length="14"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]"
+                          name="imei"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[cell]"
+                          dataType="i8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[cell]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[cell]"
+                          name="cell"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[lac]"
+                          dataType="i8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[lac]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[lac]"
+                          name="lac"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_type]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[event_type]"
+                          length="1"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_type]"
+                          name="event_type"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_ts]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[event_ts]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_ts]"
+                          name="event_ts"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[imsi]"
+                          codePage="1252"
+                          dataType="str"
+                          length="9"
+                          name="imsi" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[imei]"
+                          codePage="1252"
+                          dataType="str"
+                          length="14"
+                          name="imei" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[cell]"
+                          dataType="i8"
+                          name="cell" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[lac]"
+                          dataType="i8"
+                          name="lac" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[event_type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="event_type" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].ExternalColumns[event_ts]"
+                          dataType="date"
+                          name="event_ts" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="FF Transactions DT Errors"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[FF_ERR_Transactions]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.Tele_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.Tele_DB]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].Columns[Flat File Source Error Output Column]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="Flat File Source Error Output Column"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].ExternalColumns[Flat File Source Error Output Column]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
+                          cachedDataType="i4"
+                          cachedName="ErrorCode"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output].Columns[ErrorCode]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
+                          cachedDataType="i4"
+                          cachedName="ErrorColumn"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output].Columns[ErrorColumn]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                          dataType="i4"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].ExternalColumns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          name="Flat File Source Error Output Column" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
+                          dataType="i4"
+                          name="ErrorCode" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
+                          dataType="i4"
+                          name="ErrorColumn" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input].ExternalColumns[audit_id]"
+                          dataType="i4"
+                          name="audit_id" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup Subscriber_id"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[dim_imsi_reference]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dim_imsi_reference]) [refTable]
+where [refTable].[imsi] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imsi" dataType="DT_STR" length="9" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="subscriber_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imsi]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.Tele_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.Tele_DB]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Inputs[Lookup Input].Columns[imsi]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="9"
+                          cachedName="imsi"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imsi]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">imsi</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="IgnoreFailure"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Match Output].Columns[subscriber_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Match Output].Columns[subscriber_id]"
+                          name="subscriber_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">subscriber_id</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Rows inserted"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Rows inserted">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::pre_insterted_rows</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Rows inserted.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Rows inserted.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Rows inserted.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Err Rows"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="SRC Err Rows">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::extracted_row_ERR</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Err Rows.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Err Rows.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Err Rows.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Total Rows"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="SRC Total Rows">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::extracted_rows</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Total Rows.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Total Rows.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Total Rows.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Tele_DB Transactions"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Transactions]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Transactions]"
+                      connectionManagerRefId="Package.ConnectionManagers[Transactions]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="RedirectRow"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[imsi]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="9"
+                          cachedName="imsi"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[IMSI]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imsi]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[cell]"
+                          cachedDataType="i8"
+                          cachedName="cell"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[CELL]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[cell]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[lac]"
+                          cachedDataType="i8"
+                          cachedName="lac"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[LAC]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[lac]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[event_type]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="event_type"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[EVENT_TYPE]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_type]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[event_ts]"
+                          cachedDataType="date"
+                          cachedName="event_ts"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[EVENT_TS]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_ts]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="id"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[Transaction_id]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[id]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[subscriber_id]"
+                          cachedDataType="i4"
+                          cachedName="subscriber_id"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[Subscriber_id]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Match Output].Columns[subscriber_id]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[TAC]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="TAC"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[TAC]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Output].Columns[TAC]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[SNR]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="SNR"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[SNR]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Output].Columns[SNR]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[imei]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="14"
+                          cachedName="imei"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[IMEI]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].Columns[audit_id]"
+                          cachedDataType="i4"
+                          cachedName="audit_id"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[audit_id]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Output].Columns[audit_id]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                          dataType="i4"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[Transaction_id]"
+                          dataType="i4"
+                          name="Transaction_id" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[IMSI]"
+                          codePage="1252"
+                          dataType="str"
+                          length="9"
+                          name="IMSI" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[Subscriber_id]"
+                          dataType="i4"
+                          name="Subscriber_id" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[TAC]"
+                          codePage="1252"
+                          dataType="str"
+                          length="8"
+                          name="TAC" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[SNR]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="SNR" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[IMEI]"
+                          codePage="1252"
+                          dataType="str"
+                          length="14"
+                          name="IMEI" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[CELL]"
+                          dataType="i4"
+                          name="CELL" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[LAC]"
+                          dataType="i4"
+                          name="LAC" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[EVENT_TYPE]"
+                          codePage="1252"
+                          dataType="str"
+                          length="2"
+                          name="EVENT_TYPE" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[EVENT_TS]"
+                          dataType="dbTimeStamp"
+                          name="EVENT_TS" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input].ExternalColumns[audit_id]"
+                          dataType="i4"
+                          name="audit_id" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Tele_DB Transactions Null Errors"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[ERR_Transactions]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Transactions]"
+                      connectionManagerRefId="Package.ConnectionManagers[Transactions]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="id"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[id]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[imsi]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="9"
+                          cachedName="imsi"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[imsi]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imsi]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[imei]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="14"
+                          cachedName="imei"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[imei]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[imei]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[cell]"
+                          cachedDataType="i8"
+                          cachedName="cell"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[cell]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[cell]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[lac]"
+                          cachedDataType="i8"
+                          cachedName="lac"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[lac]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[lac]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[event_type]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="event_type"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[event_type]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_type]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[event_ts]"
+                          cachedDataType="date"
+                          cachedName="event_ts"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[event_ts]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output].Columns[event_ts]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
+                          cachedDataType="i4"
+                          cachedName="ErrorCode"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
+                          cachedDataType="i4"
+                          cachedName="ErrorColumn"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[TAC]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="TAC"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[tac]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Output].Columns[TAC]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[SNR]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="SNR"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[snr]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Output].Columns[SNR]" />
+                        <inputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].Columns[audit_id]"
+                          cachedDataType="i4"
+                          cachedName="audit_id"
+                          externalMetadataColumnId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[audit_id]"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Output].Columns[audit_id]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[imsi]"
+                          codePage="1252"
+                          dataType="str"
+                          length="9"
+                          name="imsi" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[imei]"
+                          codePage="1252"
+                          dataType="str"
+                          length="14"
+                          name="imei" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[cell]"
+                          dataType="i8"
+                          name="cell" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[lac]"
+                          dataType="i8"
+                          name="lac" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[event_type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="event_type" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[event_ts]"
+                          dataType="dbTimeStamp"
+                          name="event_ts" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[tac]"
+                          codePage="1252"
+                          dataType="str"
+                          length="8"
+                          name="tac" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[snr]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="snr" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
+                          dataType="i4"
+                          name="ErrorCode" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
+                          dataType="i4"
+                          name="ErrorColumn" />
+                        <externalMetadataColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input].ExternalColumns[audit_id]"
+                          dataType="i4"
+                          name="audit_id" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Derived Column Output]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Inputs[Derived Column Input]"
+                  name="Derived Column Output"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Derived Column Output1]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Inputs[Lookup Input]"
+                  name="Derived Column Output"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Derived Column Output2]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Total Rows.Inputs[Row Count Input 1]"
+                  name="Derived Column Output"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Derived Column Output3]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Err Rows.Inputs[Row Count Input 1]"
+                  name="Derived Column Output"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Derived Column Output4]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\Rows inserted.Inputs[Row Count Input 1]"
+                  name="Derived Column Output"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Flat File Source Error Output]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id.Inputs[Derived Column Input]"
+                  name="Flat File Source Error Output"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Error Output]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Flat File Source Output]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Lookup Match Output]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id.Inputs[Derived Column Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[OLE DB Destination Error Output]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\Dest Err Rows.Inputs[Row Count Input 1]"
+                  name="OLE DB Destination Error Output"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Outputs[OLE DB Destination Error Output]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Row Count Output 1]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values.Inputs[Derived Column Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Total Rows.Outputs[Row Count Output 1]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Row Count Output 11]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors.Inputs[OLE DB Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Err Rows.Outputs[Row Count Output 1]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Row Count Output 12]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions.Inputs[OLE DB Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\Rows inserted.Outputs[Row Count Output 1]" />
+                <path
+                  refId="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Row Count Output 13]"
+                  endId="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors.Inputs[OLE DB Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Full Loop SRC File\Load FF to Telecom_DB\Dest Err Rows.Outputs[Row Count Output 1]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Full Loop SRC File\MV FF to Archive"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{5003F1FB-3B7A-4E96-9AFE-954FDE4F08F9}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="MV FF to Archive"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::FullPath"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::FF_Archive"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Full Loop SRC File.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{03574542-E90F-4DDA-BD8E-44A68196C56E}"
+          DTS:From="Package\Full Loop SRC File\Load FF to Telecom_DB"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Full Loop SRC File\Execute SQL Task" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Full Loop SRC File.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{05FB1051-C617-484F-B300-462BB83FCFED}"
+          DTS:EvalOp="3"
+          DTS:Expression="@[User::Copy_Move] ==&quot;move&quot;"
+          DTS:From="Package\Full Loop SRC File\Execute SQL Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Full Loop SRC File\MV FF to Archive" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Full Loop SRC File.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{33D4CEEF-044D-4BAF-B0A5-D3B69ABD2EE6}"
+          DTS:From="Package\Full Loop SRC File\Insert Record IN Auditing Table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Full Loop SRC File\Load FF to Telecom_DB" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Full Loop SRC File.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{CD7B2540-C85F-4976-9A81-ABC6967D6E53}"
+          DTS:EvalOp="3"
+          DTS:Expression="@[User::Copy_Move] ==&quot;copy&quot;"
+          DTS:From="Package\Full Loop SRC File\Execute SQL Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Full Loop SRC File\CP FF to Archive" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{EF6BAC49-1916-4B2C-815E-BAF86B7A25A5}"
+          DTS:ObjectName="{EF6BAC49-1916-4B2C-815E-BAF86B7A25A5}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Batch_id"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{A46E130B-3DB8-40D3-B303-16F6220DDE58}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Batch_id"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{18EF257B-A7B5-4E12-9C69-1F3B6EA15917}"
+          SQLTask:SqlStatementSource="select max(batch_id) +1  as batch_id from Auditing"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::batch_id" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{E5E12777-A369-4CAE-9882-2E4826D0EB62}"
+      DTS:From="Package\Empty Transaction Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Full Loop SRC File" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{B23FEFEE-9890-40DD-98F5-B3458DBAB1CB}"
+      DTS:From="Package\Get Batch_id"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Full Loop SRC File" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="195.2,41.6"
+          Id="Package\Empty Transaction Table"
+          TopLeft="259.285718701324,56.5882360877463" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Full Loop SRC File\CP FF to Archive"
+          TopLeft="204.942863139815,254.341181350332" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB"
+          TopLeft="100.214292027513,96.8823585073014" />
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\Full Loop SRC File\MV FF to Archive"
+          TopLeft="28.5142887066825,255.211771022738" />
+        <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\Full Loop SRC File\Insert Record IN Auditing Table"
+          TopLeft="82.0285774985138,11.3882379109471" />
+        <EdgeLayout
+          Id="Package\Full Loop SRC File.PrecedenceConstraints[Constraint 2]"
+          TopLeft="195.521434763013,52.9882379109471">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.8941205963542"
+              Start="0,0"
+              End="0,36.3941205963542">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.3941205963542" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Full Loop SRC File\Execute SQL Task"
+          TopLeft="112.742863735861,178.411767376336" />
+        <EdgeLayout
+          Id="Package\Full Loop SRC File.PrecedenceConstraints[Constraint]"
+          TopLeft="194.678577881687,138.482358507301">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.9294088690342"
+              Start="0,0"
+              End="0,32.4294088690342">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.4294088690342" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Full Loop SRC File.PrecedenceConstraints[Constraint 1]"
+          TopLeft="193.942863735861,220.011767376336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-86.6285750291783,35.2000036464021"
+              Start="0,0"
+              End="-86.6285750291783,27.7000036464021">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.6000018232011" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.6000018232011"
+                    Point2="0,17.6000018232011"
+                    Point3="-4,17.6000018232011" />
+                  <mssgle:LineSegment
+                    End="-82.6285750291783,17.6000018232011" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-82.6285750291783,17.6000018232011"
+                    Point2="-86.6285750291783,17.6000018232011"
+                    Point3="-86.6285750291783,21.6000018232011" />
+                  <mssgle:LineSegment
+                    End="-86.6285750291783,27.7000036464021" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-51.3142875145892,22.6000018232011,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Full Loop SRC File.PrecedenceConstraints[Constraint 3]"
+          TopLeft="219.676197069194,220.011767376336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.2666660706204,34.3294139739961"
+              Start="0,0"
+              End="63.2666660706204,26.8294139739961">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.93271825676331" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.93271825676331"
+                    Point2="0,13.9327182567633"
+                    Point3="4,13.9327182567633" />
+                  <mssgle:LineSegment
+                    End="59.2666660706204,13.9327182567633" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59.2666660706204,13.9327182567633"
+                    Point2="63.2666660706204,13.9327182567633"
+                    Point3="63.2666660706204,17.9327182567633" />
+                  <mssgle:LineSegment
+                    End="63.2666660706204,26.8294139739961" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="23.6333330353102,18.9327182567633,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="400,352"
+          Size="400,395.2"
+          Id="Package\Full Loop SRC File"
+          TopLeft="274.285718956772,132.294119502434" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Get Batch_id"
+          TopLeft="507.857151505899,51.2352948362027" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="577.057151505899,92.8352948362027">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-37.4380992157934,39.4588246662314"
+              Start="0,0"
+              End="-37.4380992157934,31.9588246662314">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5809709160745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5809709160745"
+                    Point2="0,23.5809709160745"
+                    Point3="-4,23.5809709160745" />
+                  <mssgle:LineSegment
+                    End="-33.4380992157934,23.5809709160745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33.4380992157934,23.5809709160745"
+                    Point2="-37.4380992157934,23.5809709160745"
+                    Point3="-37.4380992157934,27.5809709160745" />
+                  <mssgle:LineSegment
+                    End="-37.4380992157934,31.9588246662314" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="356.885718701324,98.1882360877463">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.0666669221145,34.1058834146878"
+              Start="0,0"
+              End="52.0666669221145,26.6058834146878">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.3820020406501" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.3820020406501"
+                    Point2="0,20.3820020406501"
+                    Point3="4,20.3820020406501" />
+                  <mssgle:LineSegment
+                    End="48.0666669221145,20.3820020406501" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.0666669221145,20.3820020406501"
+                    Point2="52.0666669221145,20.3820020406501"
+                    Point3="52.0666669221145,24.3820020406501" />
+                  <mssgle:LineSegment
+                    End="52.0666669221145,26.6058834146878" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Full Loop SRC File\Load FF to Telecom_DB">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions"
+          TopLeft="363.937081027744,573.59454520509" />
+        <NodeLayout
+          Size="136,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\FF SRC Files"
+          TopLeft="415.739802998374,19.6911767467496" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\DER SNR n TAC"
+          TopLeft="338.520413928234,448.911070067096" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id"
+          TopLeft="330.229597460512,268.750003114635" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\Derived Subscriber_Id"
+          TopLeft="529.209192685849,349.424373699445" />
+        <NodeLayout
+          Size="232.8,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors"
+          TopLeft="347.185380062193,702.313034152833" />
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\DER Replace Null Values"
+          TopLeft="512.698421429615,198.144727223198" />
+        <NodeLayout
+          Size="200.8,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors"
+          TopLeft="42.5170075267809,246.526614101701" />
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Lookup Match Output]"
+          TopLeft="419.829597460512,310.350003114635">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="200.579595225337,39.0743705848102"
+              Start="0,0"
+              End="200.579595225337,31.5743705848102">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5371852924051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5371852924051"
+                    Point2="0,19.5371852924051"
+                    Point3="4,19.5371852924051" />
+                  <mssgle:LineSegment
+                    End="196.579595225337,19.5371852924051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="196.579595225337,19.5371852924051"
+                    Point2="200.579595225337,19.5371852924051"
+                    Point3="200.579595225337,23.5371852924051" />
+                  <mssgle:LineSegment
+                    End="200.579595225337,31.5743705848102" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="52.0984108939187,24.5371852924051,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Derived Column Output1]"
+          TopLeft="609.498421429615,239.744727223198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-189.668823969103,29.005275891437"
+              Start="0,0"
+              End="-189.668823969103,21.505275891437">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5026379457185" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5026379457185"
+                    Point2="0,14.5026379457185"
+                    Point3="-4,14.5026379457185" />
+                  <mssgle:LineSegment
+                    End="-185.668823969103,14.5026379457185" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-185.668823969103,14.5026379457185"
+                    Point2="-189.668823969103,14.5026379457185"
+                    Point3="-189.668823969103,18.5026379457185" />
+                  <mssgle:LineSegment
+                    End="-189.668823969103,21.505275891437" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Derived Column Output]"
+          TopLeft="620.409192685849,391.024373699445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-205.488778757615,57.8866963676507"
+              Start="0,0"
+              End="-205.488778757615,50.3866963676507">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9433481838254" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.9433481838254"
+                    Point2="0,28.9433481838254"
+                    Point3="-4,28.9433481838254" />
+                  <mssgle:LineSegment
+                    End="-201.488778757615,28.9433481838254" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-201.488778757615,28.9433481838254"
+                    Point2="-205.488778757615,28.9433481838254"
+                    Point3="-205.488778757615,32.9433481838254" />
+                  <mssgle:LineSegment
+                    End="-205.488778757615,50.3866963676507" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="116.8,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\Audit_id"
+          TopLeft="829.591850862559,50.2521015451029" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Total Rows"
+          TopLeft="832.653075404487,140.92437172431" />
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Flat File Source Output]"
+          TopLeft="551.739802998374,40.4911767467496">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="277.852047864186,30.5609247983533"
+              Start="0,0"
+              End="270.352047864186,30.5609247983533">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="134.926023932093,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="134.926023932093,0"
+                    Point2="138.926023932093,0"
+                    Point3="138.926023932093,4" />
+                  <mssgle:LineSegment
+                    End="138.926023932093,26.5609247983533" />
+                  <mssgle:CubicBezierSegment
+                    Point1="138.926023932093,26.5609247983533"
+                    Point2="138.926023932093,30.5609247983533"
+                    Point3="142.926023932093,30.5609247983533" />
+                  <mssgle:LineSegment
+                    End="270.352047864186,30.5609247983533" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Derived Column Output2]"
+          TopLeft="887.991850862559,91.8521015451029">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.061224541928,49.0722701792074"
+              Start="0,0"
+              End="21.061224541928,41.5722701792074">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5361350896037" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5361350896037"
+                    Point2="0,24.5361350896037"
+                    Point3="4,24.5361350896037" />
+                  <mssgle:LineSegment
+                    End="17.061224541928,24.5361350896037" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.061224541928,24.5361350896037"
+                    Point2="21.061224541928,24.5361350896037"
+                    Point3="21.061224541928,28.5361350896037" />
+                  <mssgle:LineSegment
+                    End="21.061224541928,41.5722701792074" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="o"
+          ParentId="Package\Full Loop SRC File\Load FF to Telecom_DB"
+          FontInfo="{assembly:Null}"
+          Size="36,60"
+          Id="8dfa3534-da6a-4f63-be53-e7929f34b465"
+          TopLeft="1092.85716146839,194.453784239746" />
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Row Count Output 1]"
+          TopLeft="832.653075404487,161.72437172431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-126.354653974872,57.2203554988874"
+              Start="0,0"
+              End="-118.854653974872,57.2203554988874">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-59.1773269874362,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-59.1773269874362,0"
+                    Point2="-63.1773269874362,0"
+                    Point3="-63.1773269874362,4" />
+                  <mssgle:LineSegment
+                    End="-63.1773269874362,53.2203554988874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-63.1773269874362,53.2203554988874"
+                    Point2="-63.1773269874362,57.2203554988874"
+                    Point3="-67.1773269874362,57.2203554988874" />
+                  <mssgle:LineSegment
+                    End="-118.854653974872,57.2203554988874" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="113.6,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\Audi_id"
+          TopLeft="123.129253797558,66.518065827954" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\SRC Err Rows"
+          TopLeft="76.1904774879916,160.467646977494" />
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Flat File Source Error Output]"
+          TopLeft="415.739802998374,40.4911767467496">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-179.010549200815,46.8268890812044"
+              Start="0,0"
+              End="-171.510549200815,46.8268890812044">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-85.5052746004075,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-85.5052746004075,0"
+                    Point2="-89.5052746004075,0"
+                    Point3="-89.5052746004075,4" />
+                  <mssgle:LineSegment
+                    End="-89.5052746004075,42.8268890812044" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-89.5052746004075,42.8268890812044"
+                    Point2="-89.5052746004075,46.8268890812044"
+                    Point3="-93.5052746004075,46.8268890812044" />
+                  <mssgle:LineSegment
+                    End="-171.510549200815,46.8268890812044" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-153.131661319158,-17.609375,127.2527734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Derived Column Output3]"
+          TopLeft="179.929253797558,108.118065827954">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-32.5387763095669,52.34958114954"
+              Start="0,0"
+              End="-32.5387763095669,44.84958114954">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.17479057477" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.17479057477"
+                    Point2="0,26.17479057477"
+                    Point3="-4,26.17479057477" />
+                  <mssgle:LineSegment
+                    End="-28.5387763095669,26.17479057477" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-28.5387763095669,26.17479057477"
+                    Point2="-32.5387763095669,26.17479057477"
+                    Point3="-32.5387763095669,30.17479057477" />
+                  <mssgle:LineSegment
+                    End="-32.5387763095669,44.84958114954" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Row Count Output 11]"
+          TopLeft="145.153742507386,202.067646977494">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.4589671242067"
+              Start="0,0"
+              End="0,36.9589671242067">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.9589671242067" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="144.8,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\Rows inserted"
+          TopLeft="588.775520230869,523.008410087271" />
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Derived Column Output4]"
+          TopLeft="414.920413928234,490.511070067096">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="246.255106302635,32.497340020175"
+              Start="0,0"
+              End="246.255106302635,24.997340020175">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.2486700100875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.2486700100875"
+                    Point2="0,16.2486700100875"
+                    Point3="4,16.2486700100875" />
+                  <mssgle:LineSegment
+                    End="242.255106302635,16.2486700100875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="242.255106302635,16.2486700100875"
+                    Point2="246.255106302635,16.2486700100875"
+                    Point3="246.255106302635,20.2486700100875" />
+                  <mssgle:LineSegment
+                    End="246.255106302635,24.997340020175" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Row Count Output 12]"
+          TopLeft="588.775520230869,543.808410087271">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-44.8384392031254,50.5861351178196"
+              Start="0,0"
+              End="-37.3384392031254,50.5861351178196">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.4192196015627,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.4192196015627,0"
+                    Point2="-22.4192196015627,0"
+                    Point3="-22.4192196015627,4" />
+                  <mssgle:LineSegment
+                    End="-22.4192196015627,46.5861351178196" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.4192196015627,46.5861351178196"
+                    Point2="-22.4192196015627,50.5861351178196"
+                    Point3="-26.4192196015627,50.5861351178196" />
+                  <mssgle:LineSegment
+                    End="-37.3384392031254,50.5861351178196" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="144.8,41.6"
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB\Dest Err Rows"
+          TopLeft="594.897969314726,668.302529772025" />
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[OLE DB Destination Error Output]"
+          TopLeft="453.937081027744,615.19454520509">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="213.360888286982,53.1079845669345"
+              Start="0,0"
+              End="213.360888286982,45.6079845669345">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5539922834673" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.5539922834673"
+                    Point2="0,26.5539922834673"
+                    Point3="4,26.5539922834673" />
+                  <mssgle:LineSegment
+                    End="209.360888286982,26.5539922834673" />
+                  <mssgle:CubicBezierSegment
+                    Point1="209.360888286982,26.5539922834673"
+                    Point2="213.360888286982,26.5539922834673"
+                    Point3="213.360888286982,30.5539922834673" />
+                  <mssgle:LineSegment
+                    End="213.360888286982,45.6079845669345" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="33.4715378934911,31.5539922834673,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Full Loop SRC File\Load FF to Telecom_DB.Paths[Row Count Output 13]"
+          TopLeft="594.897969314726,679.813034152833">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-131.312589252533,22.5"
+              Start="0,0"
+              End="-131.312589252533,15">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-127.312589252533,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-127.312589252533,0"
+                    Point2="-131.312589252533,0"
+                    Point3="-131.312589252533,4" />
+                  <mssgle:LineSegment
+                    End="-131.312589252533,15" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Full Loop SRC File\Load FF to Telecom_DB\Lookup Subscriber_id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dim_imsi_reference]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Full Loop SRC File\Load FF to Telecom_DB\Tele_DB Transactions Null Errors">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Full Loop SRC File\Load FF to Telecom_DB\FF Transactions DT Errors">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
